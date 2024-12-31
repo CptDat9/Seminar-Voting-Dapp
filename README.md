@@ -102,3 +102,5 @@ The application consists of:
 Special thanks to:
 - Open-source libraries and frameworks used in development.
 - Mentors and community members for their guidance and support.
+## Using D-app
+
