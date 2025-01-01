@@ -45,7 +45,7 @@ The DApp addresses the lack of transparency and trust in centralized voting syst
 ---
 
 ## Technical Stack
-- **Languages and Frameworks**: Solidity, React.js, JavaScript.
+- **Languages and Frameworks**: Solidity, Solidity, React + Vite, Javascript, Charka UI (Lib).
 - **Blockchain**:  
   - Deployed on **BNB Testnet** for testing and validation.  
   - Future integration planned with **Oasis Sapphire** for privacy-focused voting or **Polkadot** via Moonbeam/Astar for decentralized governance.  
