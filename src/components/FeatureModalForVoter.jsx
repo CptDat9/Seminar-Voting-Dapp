@@ -3,6 +3,10 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseBu
 import VoteSeminar from "./VoterFeatures/VoteSeminar";
 import VoteSpeaker from "./VoterFeatures/VoteSpeaker";
 import SetNameYourself from "./VoterFeatures/SetNameYourSelf";
+import RemoveVoteSeminar from "./VoterFeatures/RemoveVoteSeminar";
+import RemoveVoteSpeaker from "./VoterFeatures/RemoveVoteSpeaker";
+import GetSeminarDetail from "./VoterFeatures/GetSeminarDetail";
+import ShowResults from "./VoterFeatures/ShowResults";
 
 const FeatureModalForVoter = ({ featureId, onClose }) => {
   const renderFeatureContent = () => {
@@ -13,7 +17,14 @@ const FeatureModalForVoter = ({ featureId, onClose }) => {
         return <VoteSpeaker />;
       case "setNameYourself":
         return <SetNameYourself />;
-
+      case "removeVoteSeminar":
+        return <RemoveVoteSeminar />;
+        case "removeVoteSpeaker":
+          return <RemoveVoteSpeaker />;
+      case "getSeminarDetail":
+        return <GetSeminarDetail />;
+      case "showResults":
+        return <ShowResults />;
       default:
         return <p>Chức năng không xác định.</p>;
     }

@@ -10,5 +10,9 @@ module.exports = {
       url: process.env.BSC_TESTNET,
       accounts: [process.env.OWNER_PRIV_KEY],
     },
+    westend: {
+      url: process.env.WESTEND_TESTNET, // Dùng Polkadot.js để kết nối
+      accounts: [process.env.OWNER_PRIV_KEY],
+    },
   },
 };

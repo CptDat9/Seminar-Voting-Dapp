@@ -63,7 +63,7 @@ const GetResult = () => {
       console.log(result);
     } catch (error) {
       console.error("Error fetching result for speaker:", error);
-      alert("Error fetching result for speaker.");
+      alert("Không lấy được vòng bầu chọn có thể do bạn chưa nhập roundID?.");
     } finally {
       setIsLoadingSpeaker(false);
     }

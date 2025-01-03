@@ -9,6 +9,15 @@ const SetNameYourself = () => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
+  const findName = async () => {
+    const whitelistContract = await getWhitelistContract();
+    setCurrentName(await whitelistContract.getName(accountAddress));
+  }
+  
+  useEffect(() => {
+    findName();
+    ;}, []);
+
   // Hàm xử lý đặt tên mới
   const handleSetName = async () => {
     if (!newName.trim()) {
@@ -27,7 +36,7 @@ const SetNameYourself = () => {
     try {
       const whitelistContract = await getWhitelistContract();
       const tx = await whitelistContract.setName(accountAddress, newName);
-      await tx.wait(); // Chờ giao dịch được xác nhận
+      await tx.wait(); 
 
       toast({
         title: "Thành công",

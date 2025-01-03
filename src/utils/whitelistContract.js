@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import WhitelistABI from "../contracts/WhitelistUpgradeableV2.json";
 
-const contractAddress = "0xB764fACBE0b8c8e3fca33d8e51B8081b5d553DDB";
+const contractAddress = "0x4c062b016CaF872093f7B4B64E6E4845D193a7c9";
 
 const getWhitelistContract = async () => {
   if (!window.ethereum) {

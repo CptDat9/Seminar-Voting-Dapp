@@ -7,8 +7,17 @@ import AddAdmin from "./AdminFeatures/AddAdmin";
 import ShowAllRound from "./AdminFeatures/ShowAllRound";
 import CreateCertificate from "./AdminFeatures/CreateCertificate"; 
 import ManageSoul from "./AdminFeatures/ManageSoul";
-import GetVotersDontVote from "./AdminFeatures/getVotersDontVote";
+import GetVotersDontVote from "./AdminFeatures/GetVotersDontVote.jsx";
 import GetResult from "./AdminFeatures/getResult";
+import ManageSeminarsNFT from "./AdminFeatures/ManageSeminarsNFT.jsx";
+import RemoveAdmin from "./AdminFeatures/RemoveAdmin.jsx";
+import ShowVoter from "./AdminFeatures/ShowVoter";
+import ShowAdmin from "./AdminFeatures/ShowAdmin";
+import SetNameAdmin from "./AdminFeatures/SetNameAdmin";
+import ChooseBest from "./AdminFeatures/ChooseBest.jsx";
+
+
+
 const FeatureModalForAdmin = ({ featureId, onClose }) => {
   const renderFeatureContent = () => {
     switch (featureId) {
@@ -18,18 +27,32 @@ const FeatureModalForAdmin = ({ featureId, onClose }) => {
         return <RemoveVoter />;
       case "createAndRemoveRound":
         return <CreateAndRemoveRound />;
+      case "manageSeminarsNFT":
+        return <ManageSeminarsNFT />;
       case "addAdmin":
         return <AddAdmin />;
       case "showAllRound":
         return <ShowAllRound />;
       case "getVotersDontVote":
         return <GetVotersDontVote />;
-      case "GetResult":
+      case "getResult":
         return <GetResult />;
-      case "CreateCertificate": 
+      case "createCertificate": 
         return <CreateCertificate />; 
-      case "ManageSoul":
+      case "manageSoul":
         return <ManageSoul />;
+      case "removeAdmin":
+        return <RemoveAdmin/>;
+      case "showVoter":
+        return <ShowVoter/>;
+      case "showAdmin":
+        return <ShowAdmin/>;
+      case "setNameAdmin":
+        return <SetNameAdmin/>
+      case "manageSeminarsNFT":
+        return <ManageSeminarsNFT/>
+      case "chooseBest":
+        return <ChooseBest/>
       default:
         return <p>Chức năng không xác định.</p>;
     }

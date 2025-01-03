@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import SBTAbi from "../contracts/SBT.json";
 
-const SBT_CONTRACT_ADDRESS = "0x388E2b06e7a3a3489b05311871c0daA4De235903";
+const SBT_CONTRACT_ADDRESS = "0x7977359ADf9f31BBBff9796889f42BbF2f6A4942";
 
 const getSBTContract = async () => {
   if (!window.ethereum) {

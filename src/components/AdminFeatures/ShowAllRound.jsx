@@ -70,8 +70,8 @@ const ShowAllRound = () => {
               <Thead>
                 <Tr>
                   <Th>ID</Th>
-                  <Th>Thời gian bắt đầu</Th>
-                  <Th>Thời gian kết thúc</Th>
+                  <Th>Thời gian bắt đầu (MM-DD-YYYY)</Th>
+                  <Th>Thời gian kết thúc (MM-DD-YYYY)</Th>
                   <Th>Số phiếu tối đa (Seminar)</Th>
                   <Th>Số phiếu tối đa (Speaker)</Th>
                   <Th>Trạng thái</Th>

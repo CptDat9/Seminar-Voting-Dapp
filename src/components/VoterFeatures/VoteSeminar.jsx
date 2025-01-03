@@ -3,21 +3,45 @@ import { VStack, Select, Button, useToast, Text } from "@chakra-ui/react";
 import getWhitelistContract from "../../utils/whitelistContract";
 import getVotingContract from "../../utils/votingContract";
 
-
-const VoteSeminar = ({ roundId }) => {
+const VoteSeminar = () => {
+  //const [roundId, setRoundId] = useState(0);
   const [seminars, setSeminars] = useState([]);
   const [selectedSeminar, setSelectedSeminar] = useState("");
+  const [rounds, setRounds] = useState([]);
+  const [selectedRound, setSelectedRound] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+  
+  // Lấy danh sách round còn hoạt động từ contract
+  const fetchRounds = async () => {
+    try {
+      const contract = await getVotingContract();
+      const roundIds = await contract.getInActiveRounds(); // Lấy seminarIds từ hàm getSpeakersAndSeminars
+      const roundList = roundIds.map((id, index) => ({
+        id: Number(id),
+        name: `Round #${id}`,
+      }));
+      setRounds(roundList);
+    } catch (error) {
+      console.error("Error fetching seminars:", error);
+      toast({
+        title: "Lỗi",
+        description: "Không thể lấy danh sách round đang hoạt động.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
 
   // Lấy danh sách seminar từ contract
   const fetchSeminars = async () => {
-    try {
+    try {      
       const contract = await getWhitelistContract();
       const contract2 = await getVotingContract();
-      const [seminarIds] = await contract2.getSpeakersAndSeminars(roundId); // Lấy seminarIds từ hàm getSpeakersAndSeminars
+      const seminarIds = (await contract2.getSpeakersAndSeminars(selectedRound))[1]; // Lấy seminarIds từ hàm getSpeakersAndSeminars
       const seminarList = seminarIds.map((id, index) => ({
-        id,
+        id: Number(id),
         name: `Seminar #${id}`, // Bạn có thể thay đổi cách lấy tên từ contract
       }));
       setSeminars(seminarList);
@@ -49,7 +73,7 @@ const VoteSeminar = ({ roundId }) => {
     setIsLoading(true);
     try {
       const contract = await getVotingContract();
-      await contract.voteForSeminar(roundId, selectedSeminar); // Gọi hàm voteForSeminar từ contract
+      await contract.voteForSeminar(selectedRound, selectedSeminar); // Gọi hàm voteForSeminar từ contract
       toast({
         title: "Thành công",
         description: `Bạn đã bỏ phiếu cho seminar: ${selectedSeminar}`,
@@ -57,6 +81,7 @@ const VoteSeminar = ({ roundId }) => {
         duration: 3000,
         isClosable: true,
       });
+      setSelectedSeminar("");
     } catch (error) {
       console.error("Error voting for seminar:", error);
       toast({
@@ -72,23 +97,45 @@ const VoteSeminar = ({ roundId }) => {
   };
 
   // Lấy danh sách seminar khi component được mount
+  
+  useEffect(() => {
+  fetchRounds();}, []);
+
   useEffect(() => {
     fetchSeminars();
-  }, [roundId]);
+    console.log("Selected Round changed to:", selectedRound);
+  }, [selectedRound]);
 
+  const handleRoundChange = (e) => {
+    const newRoundId = e.target.value;  // Lấy giá trị round đã chọn
+    setSelectedRound(newRoundId);  // Cập nhật selectedRound với giá trị mới
+  };
+  
   return (
     <VStack spacing={4}>
       <Text fontSize="lg" fontWeight="bold">
         Bỏ phiếu cho Seminar
       </Text>
       <Select
-        placeholder="Chọn một seminar"
+        placeholder={selectedRound ? `Round #${selectedRound}` : "Chọn một round"}
+        value={selectedRound}
+        onChange={handleRoundChange}
+      >
+        {rounds.map((rounds) => (
+          <option key={rounds.id} value={rounds.id}>
+            {rounds.name}
+          </option>
+        ))
+        }
+      </Select>
+      <Select
+        placeholder={selectedSeminar ? selectedSeminar : "Chọn một seminar"}
         value={selectedSeminar}
         onChange={(e) => setSelectedSeminar(e.target.value)}
       >
-        {seminars.map((seminar) => (
-          <option key={seminar.id} value={seminar.id}>
-            {seminar.name}
+        {seminars.map((seminars) => (
+          <option key={seminars.id} value={seminars.id}>
+            {seminars.name}
           </option>
         ))}
       </Select>
