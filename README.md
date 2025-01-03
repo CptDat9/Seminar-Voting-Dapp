@@ -91,10 +91,7 @@ The application consists of:
 ---
 
 ## Submission Details
-- **GitHub Repository**: [Provide the link to your GitHub repo]
-- **Live Demo**: [Provide the link to live DApp or demo video]
-- **Documentation**: [Link to user guide or API documentation]
-- **Presentation Slides**: [Link to presentation slides]
+- BUIDL Hackathon: https://dorahacks.io/buidl/21102
 
 ---
 
