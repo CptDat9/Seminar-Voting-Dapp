@@ -98,19 +98,84 @@ The application consists of:
 
 ---
 
+## Apology and Commitment to Improvement
+
+We sincerely apologize for deploying and testing our contract on BSC TestNet. Out of habit, we unintentionally conducted this project on that network, which unfortunately rendered it incompatible with the Westend Asset Hub.
+
+Additionally, with the deadline approaching and our final exams for the semester coming up (we are all second-year university students), we found ourselves unable to allocate sufficient time to revise and adapt the coded files.
+
+We deeply regret the inconvenience caused and kindly ask for your understanding. Should we have the opportunity to proceed to the next round, we assure you that we will rebuild the project with greater care and precision.
+
+---
+
 ## Acknowledgments
 Special thanks to:
 - Open-source libraries and frameworks used in development.
 - Mentors and community members for their guidance and support.
 ## Using D-app
-![image](https://github.com/user-attachments/assets/fc83738e-ff39-41b5-8351-93d03255ba1b)
-![image](https://github.com/user-attachments/assets/d6b1b53b-b5c0-490f-bcd6-2a5f69098db9)
-![image](https://github.com/user-attachments/assets/36ecc973-d3c1-4476-9d1b-f9bc083b90fc)
-![image](https://github.com/user-attachments/assets/33b33b20-ccce-4231-ba3e-585f97e1378b)
-![image](https://github.com/user-attachments/assets/62c90b3a-1dbd-4de0-9ccb-b4cf54a14cf9)
-![image](https://github.com/user-attachments/assets/e1d77f02-a444-413f-93a1-131dd2a1f680)
-![image](https://github.com/user-attachments/assets/9a96e5d3-f95b-4204-b374-f35cef2d7c27)
+Admin's screen:
+![image](https://github.com/user-attachments/assets/5af8ef12-45b9-492a-bbe0-07e6d198b9bf)
 
+Add voter:
+![image](https://github.com/user-attachments/assets/0f63c671-9778-4c6d-9c55-53f643e2327f)
+
+Remove voter:
+![image](https://github.com/user-attachments/assets/e1c57647-d222-48d8-985e-05fb729b5a11)
+
+Add and Remove Voting Round:
+![image](https://github.com/user-attachments/assets/3ddc7a47-208d-4f4c-8b99-f1d9185cdc62)
+
+Mint Seminar:
+![image](https://github.com/user-attachments/assets/79542966-d6f0-4580-ba1f-892b19702815)
+
+Add Admin:
+![image](https://github.com/user-attachments/assets/5f4c73f5-759e-474f-9e08-fc660fae4a3e)
+
+Voting Round Detail:
+![image](https://github.com/user-attachments/assets/bf936684-056a-487c-b8db-9349b9057747)
+
+Unvoted list:
+![image](https://github.com/user-attachments/assets/47d0fd32-5631-4755-a364-f172d205041a)
+
+Show Result:
+![image](https://github.com/user-attachments/assets/1e135a9f-69cc-4c68-8f87-d6255d786546)
+
+Create Certification:
+![image](https://github.com/user-attachments/assets/b240e342-57f9-4505-a3b9-e81bb148a1aa)
+
+Manage Certification:
+![image](https://github.com/user-attachments/assets/f37e7c38-9be8-4cc8-a1ee-b7c9b16583eb)
+
+Remove admin:
+![image](https://github.com/user-attachments/assets/dbc07fb5-d1d7-405d-9466-e1a57962e646)
+
+Set name:
+![image](https://github.com/user-attachments/assets/860ac790-a99d-4c40-9534-b8ca11925df1)
+
+Choose Final Winner:
+![image](https://github.com/user-attachments/assets/b6c2d0cb-1483-4c56-aac6-6034b21fc90f)
+
+Voter's screen:
+![image](https://github.com/user-attachments/assets/a206312a-8a33-40ff-a9b4-9610894c28e0)
+
+Vote for seminar:
+![image](https://github.com/user-attachments/assets/c40f7fb7-d138-4ea1-898b-d14cbe9d4a1a)
+![image](https://github.com/user-attachments/assets/007dbf7d-973b-4d26-bd41-5304d48a41ea)
+
+Vote for speaker:
+![image](https://github.com/user-attachments/assets/3c5bb3fc-4388-4580-9256-338d51fc9a51)
+
+Set name:
+![image](https://github.com/user-attachments/assets/f3e1877f-d4f0-4e38-b812-a3a743f63c06)
+
+Remove vote for seminar:
+![image](https://github.com/user-attachments/assets/51988221-8e12-4883-b9fe-d8c136db55a0)
+
+Remove vote for speaker:
+![image](https://github.com/user-attachments/assets/d8836a9f-43e3-40a4-88fc-31873551e94f)
+
+Seminar details:
+![image](https://github.com/user-attachments/assets/9e3fc6b9-d1ac-484b-8bb8-3bc776864bb7)
 
 
 
