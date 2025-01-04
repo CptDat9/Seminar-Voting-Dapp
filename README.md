@@ -99,10 +99,9 @@ The application consists of:
 
 We sincerely apologize for deploying and testing our contract on BSC TestNet. Out of habit, we unintentionally conducted this project on that network, which unfortunately rendered it incompatible with the Westend Asset Hub.
 
-Additionally, with the deadline approaching and our final exams for the semester coming up (we are all second-year university students), we found ourselves unable to allocate sufficient time to revise and adapt the coded files.
+Additionally, when we attempted to deploy the contract on remix.polkadot.io, we encountered an error indicating that the contract was too large. Unfortunately, this issue arose very close to the submission deadline, and with our final exams for the semester approaching (we are all second-year university students), we were unable to allocate sufficient time to split the contract into smaller components to meet the size requirements.
 
 We deeply regret the inconvenience caused and kindly ask for your understanding. Should we have the opportunity to proceed to the next round, we assure you that we will rebuild the project with greater care and precision.
-
 ---
 
 ## Acknowledgments
