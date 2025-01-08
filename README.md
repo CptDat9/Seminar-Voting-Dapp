@@ -83,7 +83,6 @@ The application consists of:
 
 ---
 
-## Challenges Faced
 ## Challenges Faced and Solutions
 
 - **UI Design**: The frontend, while functional, requires improvements in usability and aesthetics. Enhancing the user experience is a priority for better engagement.
